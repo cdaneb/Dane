@@ -80,7 +80,70 @@ body {
     margin: 0 auto; /* centers it horizontally */
     padding: 20px; /* space inside the box */
   }
-  
+
+.poster-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.poster-thumbnail {
+  width: 300px; /* small thumbnail size */
+  cursor: pointer;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.poster-thumbnail:hover {
+  border: 2px solid #555;
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9); /* Dark background */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 900px;
+}
+
+#caption {
+  text-align: center;
+  color: #ccc;
+  padding: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
 
   footer {
     background-color: #009198;
