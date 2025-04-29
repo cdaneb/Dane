@@ -11,9 +11,10 @@
 <body>
 
     <header>
-      <h1 id="typewriter-name"></h1>
-      <p id="typewriter-description"></p>
+      <h1>Dane Beels</h1>
+      <p>My webpage for new projects, posts, or updates to my professional life</p>
     </header>
+  
 
     <div class="content">
 
@@ -72,37 +73,6 @@
     
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-
-    <script>
-      function typeWriter(text, elementId, delay = 100, callback = null) {
-        let i = 0;
-        const element = document.getElementById(elementId);
-        const cursor = document.createElement('span');
-        cursor.className = 'cursor';
-        cursor.textContent = '|'; // The blinking cursor
-    
-        element.appendChild(cursor);
-    
-        function typing() {
-          if (i < text.length) {
-            element.insertBefore(document.createTextNode(text.charAt(i)), cursor);
-            i++;
-            setTimeout(typing, delay);
-          } else {
-            if (callback) {
-              callback();
-            }
-          }
-        }
-        typing();
-      }
-    
-      // Start typing the name first
-      typeWriter("Dane Beels", "typewriter-name", 100, function() {
-        // After the name, type the description
-        typeWriter("My webpage for new projects, posts, or updates to my professional life", "typewriter-description", 40);
-      });
     </script>
   
 
