@@ -63,12 +63,17 @@
 
   
     <footer>
-        <p>
-          <a href="mailto:cdanebeels@gmail.com">
-            <i class="fas fa-envelope"></i> cdanebeels@gmail.com
-          </a> | Christian Dane Beels, 2025. 
-        </p>
-      </footer>
+      <p>
+        <a href="mailto:cdanebeels@gmail.com">
+          <i class="fas fa-envelope"></i> cdanebeels@gmail.com
+        </a> | Christian Dane Beels, <span id="year"></span>.
+      </p>
+    </footer>
+    
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
 
 </body>
 </html>
