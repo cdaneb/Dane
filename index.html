@@ -54,18 +54,21 @@
       function typeWriter(text, elementId, delay = 100, callback = null) {
         let i = 0;
         const element = document.getElementById(elementId);
-        const cursor = document.createElement('span');
-        cursor.className = 'cursor';
-        cursor.textContent = '|'; // The blinking cursor
     
+        // Create blinking cursor
+        let cursor = document.createElement('span');
+        cursor.className = 'cursor';
+        cursor.textContent = '|';
         element.appendChild(cursor);
     
         function typing() {
           if (i < text.length) {
-            element.insertBefore(document.createTextNode(text.charAt(i)), cursor);
+            // Insert the next character before the cursor
+            cursor.insertAdjacentText('beforebegin', text.charAt(i));
             i++;
             setTimeout(typing, delay);
           } else {
+            // After typing finishes, remove the blinking cursor (or you can keep it if you want)
             cursor.remove();
             if (callback) {
               callback();
@@ -77,7 +80,7 @@
     
       // Start typing the name first
       typeWriter("Dane Beels", "typewriter-name", 100, function() {
-        // After the name, type the description
+        // After name is typed, type the description
         typeWriter("My webpage for new projects, posts, or updates to my professional life", "typewriter-description", 40);
       });
     </script>
