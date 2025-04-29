@@ -157,6 +157,7 @@ body {
 header {
   text-align: center;
   margin-top: 50px;
+  color: white;
 }
 
 #typewriter-name {
@@ -167,7 +168,7 @@ header {
 #typewriter-description {
   font-size: 1.2rem;
   margin-top: 10px;
-  color: #555;
+  color: #white;
 }
 
 /* Blinking cursor style */
@@ -175,7 +176,7 @@ header {
   display: inline-block;
   margin-left: 2px;
   width: 1px;
-  background-color: black;
+  background-color: white;
   animation: blink 1s infinite;
 }
 
