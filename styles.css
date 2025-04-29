@@ -154,6 +154,39 @@ body {
   cursor: pointer;
 }
 
+header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#typewriter-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#typewriter-description {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Blinking cursor style */
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  width: 1px;
+  background-color: black;
+  animation: blink 1s infinite;
+}
+
+/* Blinking animation */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
 
 
 
