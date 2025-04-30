@@ -171,25 +171,6 @@ header {
   color: white;
 }
 
-/* Blinking cursor style */
-.cursor {
-  display: inline-block;
-  margin-left: 2px;
-  width: 1px;
-  background-color: white;
-  animation: blink 1s infinite;
-}
-
-/* Blinking animation */
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-
-
-
 
   footer {
     background-color: #009198;
