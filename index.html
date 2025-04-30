@@ -55,13 +55,21 @@
         let i = 0;
         const element = document.getElementById(elementId);
     
+        // Create blinking cursor
+        let cursor = document.createElement('span');
+        cursor.className = 'cursor';
+        cursor.textContent = '';
+        element.appendChild(cursor);
+    
         function typing() {
           if (i < text.length) {
             // Insert the next character before the cursor
+            cursor.insertAdjacentText('beforebegin', text.charAt(i));
             i++;
             setTimeout(typing, delay);
           } else {
             // After typing finishes, remove the blinking cursor (or you can keep it if you want)
+            cursor.remove();
             if (callback) {
               callback();
             }
