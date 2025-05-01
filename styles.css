@@ -27,10 +27,6 @@ header {
   padding: 2rem 0;
 }
 
-header h1 {
-  margin-top: 0;
-}
-
 
   a {
     color: inherit; /* Make links use the same color as surrounding text */
