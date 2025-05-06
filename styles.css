@@ -8,8 +8,8 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #dbf9ff; /* light gray background */
-    color: #05537c; /* text color (black) */
+    background-color: #dbf9ff;
+    color: #05537c;
     font-size: 18px;
   }
 
@@ -19,14 +19,12 @@ body {
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 4rem 0;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-header {
-  background-color: #26c0cb;
-  color: white;
-  text-align: center;
-  padding: 2rem 0;
-}
 
 
   a {
@@ -173,10 +171,6 @@ header p {
   margin: 0;
 }
 
-header {
-  text-align: center;
-  color: white;
-}
 
 #typewriter-name {
   font-size: 2.5rem;
