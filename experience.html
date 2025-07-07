@@ -1,63 +1,161 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dane Beels</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4fbfc;
+      color: #05537c;
+    }
+
+    header {
+      background: linear-gradient(135deg, #26c0cb, #009198);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      background-color: #0077b6;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .hero-buttons a:hover {
+      background-color: #005f8d;
+    }
+
+    nav {
+      background-color: #0077b6;
+      padding: 10px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #009198;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    
-    <header>
-        <h1>Dane Beels</h1>
-        <p>My webpage for new projects, posts, or updates to my professional life</p>
-    </header>
 
-    <div class="content">
+  <header>
+    <h1>Dane Beels</h1>
+    <p>NY | West Point Class of 2028</p>
+    <div class="hero-buttons">
+      <a href="mailto:cdanebeels@gmail.com"><i class="fas fa-envelope"></i> Contact Me</a>
+      <a href="projects.html"><i class="fas fa-code"></i> View Projects</a>
+    </div>
+  </header>
 
-    <nav>
-        <a href="index.html">About</a>
-        <a href="education.html">Education & Certifications</a>
-        <a href="experience.html">Experience</a>
-        <a href="projects.html">Projects</a>
-      </nav>
+  <nav>
+    <a href="index.html">About</a>
+    <a href="education.html">Education</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+  </nav>
 
-    
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul>
+  <div class="content">
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
         <p><strong>Astrophysics Research Intern</strong> at the
-          <strong><a href="https://www.amnh.org/research/physical-sciences/astrophysics" target="_blank">American Museum of Natural History</a></strong>, Manhattan, NY <br>(June - August 2023)
+          <strong>American Museum of Natural History</strong>, Manhattan, NY <br>(June - August 2023)
           <br>Researched within the AMNH Astrophysics Department,
           Wrote paper under guide of mentor (Prof. at CUNY) on white dwarf star exoplanet detection. Worked alongside undergrad/grad students.
           <br><br>
-          <strong>Research Project Intern</strong> at the <strong><a href="https://www.mda.mil" target="_blank">Missile Defense Agency</a></strong>, Huntsville, AL <br>(June - July 2025)
+          <strong>Research Project Intern</strong> at the <strong>Missile Defense Agency</strong>, Huntsville, AL <br>(June - July 2025)
           <br>Developed and analyzed models of nuclear radiation environments to improve the survivability of ground-based interceptors in missile defense operations.
           <br><br>
-          <strong>Volunteer</strong> at the <strong><a href="https://www.fullercenterny.org/" target="_blank">Fuller Center for Housing of Greater NYC</a></strong> <br>(2021 - 2024)
-        
-        
+          <strong>Volunteer</strong> at the <strong>Fuller Center for Housing of Greater NYC</strong> <br>(2021 - 2024)
         </p>
-    </ul>
-  </section>
+      </ul>
+    </section>
+  </div>
 
-    </div>
+  <footer>
+    <p>
+      <a href="mailto:cdanebeels@gmail.com"><i class="fas fa-envelope"></i> cdanebeels@gmail.com</a> |
+      <a href="https://github.com/cdaneb" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+      <a href="https://linkedin.com/in/cdaneb" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+      &copy; <span id="year"></span> Christian Dane Beels
+    </p>
+  </footer>
 
- 
-    <footer>
-      <p>
-        <a href="mailto:cdanebeels@gmail.com">
-          <i class="fas fa-envelope"></i> cdanebeels@gmail.com
-        </a> | Christian Dane Beels, <span id="year"></span>.
-      </p>
-    </footer>
-    
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
