@@ -7,84 +7,158 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4fbfc;
+      color: #05537c;
+    }
+
+    header {
+      background: linear-gradient(135deg, #26c0cb, #009198);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      background-color: #0077b6;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .hero-buttons a:hover {
+      background-color: #005f8d;
+    }
+
+    nav {
+      background-color: #0077b6;
+      padding: 10px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+
+    .about-image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #009198;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  
 
   <header>
-      <h1 id="typewriter-name"></h1>
-      <p id="typewriter-description"></p>
+    <h1>Dane Beels</h1>
+    <p>Electrical Engineering Cadet | Cybersecurity Enthusiast | Project Creator</p>
+    <div class="hero-buttons">
+      <a href="mailto:cdanebeels@gmail.com"><i class="fas fa-envelope"></i> Contact Me</a>
+      <a href="projects.html"><i class="fas fa-code"></i> View Projects</a>
+    </div>
   </header>
-
-  <div class="content">
 
   <nav>
     <a href="index.html">About</a>
-    <a href="education.html">Education & Certifications</a>
+    <a href="education.html">Education</a>
     <a href="experience.html">Experience</a>
     <a href="projects.html">Projects</a>
   </nav>
 
-  <section id="index">
-    <h2>About</h2>
-    <img src="DaneBull.jpg" alt="Granada Bull" class="about-image">
-    <p><br>Welcome to my website! I'm a Cadet at West Point majoring in Electrical Engineering, with an interest in cybersecurity. 
-      I also enjoy astronomy, weightlifting, and making digital music. 
-      <br>
-      <br>
-      This website will mostly be for posting new projects I am working on that are tech, electronics, or cyber related. 
-      Click my email below to reach out about business / professional inquiries.
-    </p>
-  </section>
+  <div class="content">
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="DaneBull.jpg" alt="Dane Beels in Granada" class="about-image">
+      <p>
+        Welcome! I’m a Cadet at West Point majoring in Electrical Engineering with a passion for cybersecurity, astronomy, weightlifting, and digital music. <br><br>
+        This site is where I share my projects, experiences, and updates about my professional journey. 
+      </p>
+    </section>
   </div>
 
   <footer>
-  <p>
-    <a href="mailto:cdanebeels@gmail.com">
-      <i class="fas fa-envelope"></i> cdanebeels@gmail.com
-    </a> | Christian Dane Beels, <span id="year"></span>.
-  </p>
-</footer>
+    <p>
+      <a href="mailto:cdanebeels@gmail.com"><i class="fas fa-envelope"></i> cdanebeels@gmail.com</a> |
+      <a href="https://github.com/cdaneb" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+      <a href="https://linkedin.com/in/cdaneb" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+      &copy; <span id="year"></span> Christian Dane Beels
+    </p>
+  </footer>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-    <script>
-      function typeWriter(text, elementId, delay = 100, callback = null) {
-        let i = 0;
-        const element = document.getElementById(elementId);
-    
-        // Create blinking cursor
-        let cursor = document.createElement('span');
-        cursor.className = 'cursor';
-        cursor.textContent = '';
-        element.appendChild(cursor);
-    
-        function typing() {
-          if (i < text.length) {
-            // Insert the next character before the cursor
-            cursor.insertAdjacentText('beforebegin', text.charAt(i));
-            i++;
-            setTimeout(typing, delay);
-          } else {
-            // After typing finishes, remove the blinking cursor (or you can keep it if you want)
-            cursor.remove();
-            if (callback) {
-              callback();
-            }
-          }
-        }
-        typing();
-      }
-    
-      // Start typing the name first
-      typeWriter("Dane Beels", "typewriter-name", 100, function() {
-        // After name is typed, type the description
-        typeWriter("My webpage for new projects, posts, or updates to my professional life", "typewriter-description", 40);
-      });
-    </script>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
