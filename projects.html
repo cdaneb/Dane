@@ -92,13 +92,14 @@
     /* Grid for projects (image + 2 PDFs) */
     .projects-grid {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;  /* stack items vertically */
       gap: 20px;
-      justify-content: center;
+      align-items: center;     /* center them horizontally */
     }
 
     .project-item {
-      max-width: 300px;
+      width: 100%;
+      max-width: 600px;        /* optional: make them a bit wider than 300px */
     }
 
     .poster-thumbnail {
@@ -285,7 +286,7 @@
               </span>
             </div>
             <p class="caption">
-              Beels, C. D. (2025). Speech Recognition as a Threat Vector in Real-Time Doxxing. Poster presented at EE388.
+              Beels, C. D. (December 2025). Speech Recognition as a Threat Vector in Real-Time Doxxing. Poster presented to USMA EECS Department.
             </p>
           </div>
 
@@ -388,3 +389,4 @@
 
 </body>
 </html>
+
